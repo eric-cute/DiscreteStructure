@@ -1,0 +1,47 @@
+/*
+Exercise 1: Using Java, simulate a line at a store or bank using a queue. The program should allow the customer to join the line and wait for service, and should serve customers in the order they joined the line.
+*/
+
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class SampleQueue {
+
+    public static void main(String[] args) {
+
+        Queue<String> queue = new LinkedList<String>();
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("\n1. Join Queue\n2. Serve Customer\n3. Exit");
+            System.out.print("Choose an option: ");
+            int option = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (option) {
+                case 1:
+                    System.out.print("Enter Customer name: ");
+                    String name = scanner.nextLine();
+                    queue.add(name);
+                    System.out.println(name + " joined the queue");
+                    break;
+                case 2:
+                    if (queue.isEmpty()) {
+                        System.out.println("No customer in the queue");
+                    } else {
+                        System.out.println(queue.poll() + " has been served");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Exiting program! Goodbye!");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Invalid option. Try again!");
+            }
+        }
+
+    }
+}

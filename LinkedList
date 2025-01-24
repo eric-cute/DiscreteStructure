@@ -1,0 +1,44 @@
+/*
+Test your understanding of linkedlists through the following machine exercises. Use your Netbeans IDE or your IDE of choice. Remember to import the LinkedList class if you have not done so previously. You’ll need to use the following LinkedList methods - addFirst, remove, get, and size. If you get stuck, a link to a sample solution is provided. If you need additional help, reach out to your mentor for assistance.
+
+
+
+When coding, practice adding comments to make it easier for your peers or mentor to understand.
+
+
+
+Exercise 1: Create a list with the following elements - apple, banana, and cherry. Write code that accomplishes the following:
+Print the list using println.
+Add orange to the beginning of the list.
+Print the list again.
+Remove an element from the list.
+Print the list again.
+Get an element at a specific index.
+Print the size of the list.
+*/
+
+import java.util.LinkedList;
+
+public class SampleLinkedList {
+
+
+    public static void main(String[] args) {
+        LinkedList<String> mylist = new LinkedList<String>();
+        mylist.add("Apple");
+        mylist.add("Banana");
+        mylist.add("Cherry");
+        System.out.println(mylist); // print the list using println
+
+        mylist.addFirst("Orange"); // add orange to the beginning of the list
+        System.out.println(mylist); // print the list again
+
+        mylist.remove();
+        System.out.println(mylist);
+
+        String indexValue = mylist.get(2);
+        System.out.println(indexValue);
+
+        int size = mylist.size();
+        System.out.println("The size of the list is " + size);
+    }
+}
